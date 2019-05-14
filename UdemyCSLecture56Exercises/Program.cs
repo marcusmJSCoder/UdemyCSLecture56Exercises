@@ -22,24 +22,44 @@ namespace UdemyCSLecture56Exercises
              * Write a program and continuously ask the user to enter different names, until the user presses Enter (without supplying a name). Depending on the number of names provided, display a message based on the above pattern.
              */
 
-            string input;
-            var names = new List<string>();
+            //string input;
+            //var names = new List<string>();
 
-            while (true)
+            //while (true)
+            //{
+            //    Console.WriteLine("Enter different names: ");
+            //    input = Console.ReadLine();
+            //    names.Add(input);
+
+            //    if (String.IsNullOrWhiteSpace(input))
+            //        break;
+            //    else if (names.Count() == 1)
+            //        Console.WriteLine(names[0] + " likes your post.");
+            //    else if (names.Count() == 2)
+            //        Console.WriteLine(names[0] + " and " + names[1] + " like your post.");
+            //    else
+            //        Console.WriteLine(names[0] + ", " + names[1] + " and " + (names.Count() - 2) + " other people like your post.");
+            //}
+
+            /*
+             * Marcus Mayo
+             * 5/14/19
+             *             
+             * 2- Write a program and ask the user to enter their name. Use an array to reverse the name and then store the result in a new string. Display the reversed name on the console.
+             */
+
+            Console.WriteLine("Enter your name");
+            var nameInput = Console.ReadLine();
+
+            var nameArray = new char[nameInput.Length];
+
+            // use a for loop to convert the chars
+            for (var i = nameInput.Length; i > 0; i--)
             {
-                Console.WriteLine("Enter different names: ");
-                input = Console.ReadLine();
-                names.Add(input);
-
-                if (String.IsNullOrWhiteSpace(input))
-                    break;
-                else if (names.Count() == 1)
-                    Console.WriteLine(names[0] + " likes your post.");
-                else if (names.Count() == 2)
-                    Console.WriteLine(names[0] + " and " + names[1] + " like your post.");
-                else
-                    Console.WriteLine(names[0] + ", " + names[1] + " and " + (names.Count() - 2) + " other people like your post.");
-            } 
+                nameArray[nameInput.Length - i] = nameInput[i - 1];
+            }
+                var reversed = new string (nameArray);
+                Console.WriteLine(reversed);
         }
     }
 }
