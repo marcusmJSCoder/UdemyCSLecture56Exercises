@@ -11,6 +11,9 @@ namespace UdemyCSLecture56Exercises
         static void Main(string[] args)
         {
             /*
+             * Marcus Mayo
+             * 5/13/19
+             * 
              * #1- When you post a message on Facebook, depending on the number of people who like your post, Facebook displays different information.
              * If no one likes your post, it doesn't display anything.
              * If only one person likes your post, it displays: [Friend's Name] likes your post.
