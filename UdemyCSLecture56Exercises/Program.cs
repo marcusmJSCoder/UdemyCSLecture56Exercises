@@ -11,7 +11,7 @@ namespace UdemyCSLecture56Exercises
         static void Main(string[] args)
         {
             /*
-             * 1- When you post a message on Facebook, depending on the number of people who like your post, Facebook displays different information.
+             * #1- When you post a message on Facebook, depending on the number of people who like your post, Facebook displays different information.
              * If no one likes your post, it doesn't display anything.
              * If only one person likes your post, it displays: [Friend's Name] likes your post.
              * If two people like your post, it displays: [Friend 1] and [Friend 2] like your post.
@@ -19,8 +19,24 @@ namespace UdemyCSLecture56Exercises
              * Write a program and continuously ask the user to enter different names, until the user presses Enter (without supplying a name). Depending on the number of names provided, display a message based on the above pattern.
              */
 
-            Console.WriteLine("Enter different names: ");
-            var input = Console.ReadLine();
+            string input;
+            var names = new List<string>();
+
+            while (true)
+            {
+                Console.WriteLine("Enter different names: ");
+                input = Console.ReadLine();
+                names.Add(input);
+
+                if (String.IsNullOrWhiteSpace(input))
+                    break;
+                else if (names.Count() == 1)
+                    Console.WriteLine(names[0] + " likes your post.");
+                else if (names.Count() == 2)
+                    Console.WriteLine(names[0] + " and " + names[1] + " like your post.");
+                else
+                    Console.WriteLine(names[0] + ", " + names[1] + " and " + (names.Count() - 2) + " other people like your post.");
+            } 
         }
     }
 }
