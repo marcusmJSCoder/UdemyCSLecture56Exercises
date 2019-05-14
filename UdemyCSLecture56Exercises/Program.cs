@@ -42,6 +42,9 @@ namespace UdemyCSLecture56Exercises
             //}
 
             /*
+             * Marcus Mayo
+             * 5/14/19
+             *             
              * 2- Write a program and ask the user to enter their name. Use an array to reverse the name and then store the result in a new string. Display the reversed name on the console.
              */
 
@@ -49,18 +52,14 @@ namespace UdemyCSLecture56Exercises
             var nameInput = Console.ReadLine();
 
             var nameArray = new char[nameInput.Length];
-           
+
             // use a for loop to convert the chars
-
-
-
-            Array.Reverse(nameArray);
-
-            foreach(char character in nameArray)
+            for (var i = nameInput.Length; i > 0; i--)
             {
-                Console.WriteLine(character);
+                nameArray[nameInput.Length - i] = nameInput[i - 1];
             }
-            
+                var reversed = new string (nameArray);
+                Console.WriteLine(reversed);
         }
     }
 }
