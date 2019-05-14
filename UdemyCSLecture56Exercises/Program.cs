@@ -45,21 +45,30 @@ namespace UdemyCSLecture56Exercises
              * Marcus Mayo
              * 5/14/19
              *             
-             * 2- Write a program and ask the user to enter their name. Use an array to reverse the name and then store the result in a new string. Display the reversed name on the console.
+             * #2- Write a program and ask the user to enter their name. Use an array to reverse the name and then store the result in a new string. Display the reversed name on the console.
              */
 
-            Console.WriteLine("Enter your name");
-            var nameInput = Console.ReadLine();
+            //Console.WriteLine("Enter your name");
+            //var nameInput = Console.ReadLine();
 
-            var nameArray = new char[nameInput.Length];
+            //var nameArray = new char[nameInput.Length];
 
-            // use a for loop to convert the chars
-            for (var i = nameInput.Length; i > 0; i--)
-            {
-                nameArray[nameInput.Length - i] = nameInput[i - 1];
-            }
-                var reversed = new string (nameArray);
-                Console.WriteLine(reversed);
+            //// use a for loop to convert the chars
+            //for (var i = nameInput.Length; i > 0; i--)
+            //{
+            //    nameArray[nameInput.Length - i] = nameInput[i - 1];
+            //}
+            //    var reversed = new string (nameArray);
+            //    Console.WriteLine(reversed);
+
+            /*
+             * #3
+             * 3- Write a program and ask the user to enter 5 numbers. If a number has been previously entered, display an error message and ask the user to re-try.
+             * Once the user successfully enters 5 unique numbers, sort them and display the result on the console.
+             * 
+             */
+
+            Console.WriteLine("Enter 5 numbers");
         }
     }
 }
