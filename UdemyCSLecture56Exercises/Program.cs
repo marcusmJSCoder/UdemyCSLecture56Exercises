@@ -45,21 +45,83 @@ namespace UdemyCSLecture56Exercises
              * Marcus Mayo
              * 5/14/19
              *             
-             * 2- Write a program and ask the user to enter their name. Use an array to reverse the name and then store the result in a new string. Display the reversed name on the console.
+             * #2- Write a program and ask the user to enter their name. Use an array to reverse the name and then store the result in a new string. Display the reversed name on the console.
              */
 
-            Console.WriteLine("Enter your name");
-            var nameInput = Console.ReadLine();
+            //Console.WriteLine("Enter your name");
+            //var nameInput = Console.ReadLine();
 
-            var nameArray = new char[nameInput.Length];
+            //var nameArray = new char[nameInput.Length];
 
-            // use a for loop to convert the chars
-            for (var i = nameInput.Length; i > 0; i--)
+            //// use a for loop to convert the chars
+            //for (var i = nameInput.Length; i > 0; i--)
+            //{
+            //    nameArray[nameInput.Length - i] = nameInput[i - 1];
+            //}
+            //    var reversed = new string (nameArray);
+            //    Console.WriteLine(reversed);
+
+            /*
+             * #3
+             * 3- Write a program and ask the user to enter 5 numbers. If a number has been previously entered, display an error message and ask the user to re-try.
+             * Once the user successfully enters 5 unique numbers, sort them and display the result on the console.
+             * 
+             */
+
+            Console.WriteLine("Enter 5 numbers");
+            var numberArray = new int[5];
+
+            for (int i = 0; i < numberArray.Length; i++)
             {
-                nameArray[nameInput.Length - i] = nameInput[i - 1];
+                var input = Console.ReadLine();
+                var inputToInteger = Convert.ToInt32(input);
+                int pos = Array.IndexOf(numberArray, inputToInteger);
+                if (pos > -1)
+                {
+                    Console.WriteLine("Number has already been entered, please retry.");
+                    i--;
+                }
+                else numberArray[i] = inputToInteger;
             }
-                var reversed = new string (nameArray);
-                Console.WriteLine(reversed);
+
+            for (int x = 0; x < numberArray.Length; x++ )
+            {
+                Array.Sort(numberArray) ;
+                Console.Write(numberArray[x] + " ");
+            }
+
+            // if new value 
+            //    if (input.Equals)
+            //    {
+
+            //    }
+
+
+            //foreach(int number in numberArray)
+            //{
+            //    numberArray[number] = inputToInteger;
+            //    Console.WriteLine(numberArray[number]);
+            //}
+
+            //if ()
+            //{
+
+            //}
+
+            /*
+             * 4- Write a program and ask the user to continuously enter a number or type "Quit" to exit. The list of numbers may include duplicates. Display the unique numbers that the user has entered.
+             * 
+             * 
+             */
+
+
+            /*
+             * 5- Write a program and ask the user to supply a list of comma separated numbers (e.g 5, 1, 9, 2, 10). If the list is empty or includes less than 5 numbers, display "Invalid List" and ask the user to re-try; otherwise, display the 3 smallest numbers in the list.
+             * 
+             * 
+             * 
+             */
+
         }
     }
 }
