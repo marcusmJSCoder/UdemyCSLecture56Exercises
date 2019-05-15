@@ -69,6 +69,59 @@ namespace UdemyCSLecture56Exercises
              */
 
             Console.WriteLine("Enter 5 numbers");
+            var numberArray = new int[5];
+
+            for (int i = 0; i < numberArray.Length; i++)
+            {
+                var input = Console.ReadLine();
+                var inputToInteger = Convert.ToInt32(input);
+                int pos = Array.IndexOf(numberArray, inputToInteger);
+                if (pos > -1)
+                {
+                    Console.WriteLine("Number has already been entered, please retry.");
+                    i--;
+                }
+                else numberArray[i] = inputToInteger;
+            }
+
+            for (int x = 0; x < numberArray.Length; x++ )
+            {
+                Array.Sort(numberArray) ;
+                Console.Write(numberArray[x] + " ");
+            }
+
+            // if new value 
+            //    if (input.Equals)
+            //    {
+
+            //    }
+
+
+            //foreach(int number in numberArray)
+            //{
+            //    numberArray[number] = inputToInteger;
+            //    Console.WriteLine(numberArray[number]);
+            //}
+
+            //if ()
+            //{
+
+            //}
+
+            /*
+             * 4- Write a program and ask the user to continuously enter a number or type "Quit" to exit. The list of numbers may include duplicates. Display the unique numbers that the user has entered.
+             * 
+             * 
+             */
+
+
+            /*
+             * 5- Write a program and ask the user to supply a list of comma separated numbers (e.g 5, 1, 9, 2, 10). If the list is empty or includes less than 5 numbers, display "Invalid List" and ask the user to re-try; otherwise, display the 3 smallest numbers in the list.
+             * 
+             * 
+             * 
+             */
+
         }
     }
 }
